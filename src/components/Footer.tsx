@@ -5,15 +5,15 @@ const Footer = () => {
     return (
         <footer className="border-t border-slate-200 bg-white container mx-auto">
 
-            {/* Main Footer */}
+            
             <div className="mx-w-6xl px-6 py-12">
 
                 <div className="grid grid-cols-1 gap-10 sm:grid-cols-2 lg:grid-cols-5">
 
-                    {/* Brand Block */}
+                    
                     <div className="lg:col-span-2">
 
-                        {/* Logo + Brand */}
+                        
                         <div className="flex items-center gap-2">
 
                             <img
@@ -24,16 +24,16 @@ const Footer = () => {
 
                         </div>
 
-                        {/* Description */}
+                        
                         <p className="mt-4 max-w-sm text-sm leading-6 text-slate-500">
                             Build your ideal development stack with the right
                             technologies for your next project.
                         </p>
 
-                        {/* Social Links */}
+                        
                         <div className="mt-5 flex items-center gap-3">
 
-                            {/* GitHub */}
+                            
                             <a
                                 href="#"
                                 aria-label="GitHub"
@@ -48,7 +48,7 @@ const Footer = () => {
                                 </svg>
                             </a>
 
-                            {/* Twitter / X */}
+                            
                             <a
                                 href="#"
                                 aria-label="Twitter"
@@ -62,7 +62,7 @@ const Footer = () => {
                                 </svg>
                             </a>
 
-                            {/* LinkedIn */}
+                            
                             <a
                                 href="#"
                                 aria-label="LinkedIn"
@@ -79,7 +79,7 @@ const Footer = () => {
                         </div>
                     </div>
 
-                    {/* Product */}
+                    
                     <div>
                         <h3 className="text-sm font-semibold text-slate-900">
                             Product
@@ -124,7 +124,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Company */}
+                    
                     <div>
                         <h3 className="text-sm font-semibold text-slate-900">
                             Company
@@ -169,7 +169,7 @@ const Footer = () => {
                         </ul>
                     </div>
 
-                    {/* Legal */}
+                    
                     <div>
                         <h3 className="text-sm font-semibold text-slate-900">
                             Legal
@@ -216,15 +216,15 @@ const Footer = () => {
 
                 </div>
 
-                {/* Bottom Bar */}
+                
                 <div className="mt-10 flex flex-col gap-4 border-t border-slate-200 pt-6 sm:flex-row sm:items-center sm:justify-between">
 
-                    {/* Copyright */}
+                    
                     <p className="text-xs text-slate-400">
                         © 2026 Dev Stack. All rights reserved.
                     </p>
 
-                    {/* Bottom Links */}
+                    
                     <div className="flex items-center gap-5 text-xs text-slate-400">
                         <a
                             href="#"

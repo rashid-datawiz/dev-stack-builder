@@ -16,7 +16,7 @@ const StackSidebar = ({
     return (
         <div className="rounded-xl border border-slate-200 bg-white p-4">
 
-            {/* Header */}
+            
             <div className="flex items-start justify-between">
 
                 <div>
@@ -33,7 +33,7 @@ const StackSidebar = ({
                     </p>
                 </div>
 
-                {/* Remove All */}
+                
                 {stack.length > 0 && (
                     <button
                         onClick={onRemoveAll}
@@ -45,7 +45,7 @@ const StackSidebar = ({
 
             </div>
 
-            {/* Empty State */}
+           
             {stack.length === 0 ? (
 
                 <div className="mt-5 rounded-lg border border-dashed border-slate-200 py-7 text-center">
@@ -58,7 +58,7 @@ const StackSidebar = ({
 
             ) : (
 
-                /* Stack Items */
+                
                 <div className="mt-4 space-y-2">
 
                     {stack.map(technology => (
@@ -68,7 +68,7 @@ const StackSidebar = ({
                             className="flex items-center gap-2 rounded-lg border border-slate-100 bg-slate-50 p-2"
                         >
 
-                            {/* Icon */}
+                            
                             <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-md bg-white">
                                 <img
                                     src={technology.icon}
@@ -77,7 +77,7 @@ const StackSidebar = ({
                                 />
                             </div>
 
-                            {/* Name + Category */}
+                            
                             <div className="min-w-0 flex-1">
 
                                 <h3 className="truncate text-[11px] font-semibold text-slate-800">
@@ -90,7 +90,7 @@ const StackSidebar = ({
 
                             </div>
 
-                            {/* Remove */}
+                            
                             <button
                                 onClick={() => onRemove(technology.id)}
                                 className="flex h-6 w-6 shrink-0 items-center justify-center rounded-full text-xs text-slate-400 hover:bg-red-50 hover:text-red-500"

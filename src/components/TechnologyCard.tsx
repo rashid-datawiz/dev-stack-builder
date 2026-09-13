@@ -14,7 +14,7 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
 
     const [stack, setStack] = useState<ITechnology[]>([])
 
-    // Add to tech stack
+    // Added to tech stack
     const handleAddToStack = (technology: ITechnology) => {
 
         const alreadyExists = stack.some(
@@ -37,7 +37,7 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
         )
     }
 
-    // Remove from tech stack
+    // Removing from tech stack
     const handleRemoveFromStack = (id: string) => {
 
         const technology = stack.find(
@@ -55,7 +55,7 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
         }
     }
 
-    // Remove all
+    // Removing all
     const handleRemoveAll = () => {
 
         if (stack.length === 0) {
