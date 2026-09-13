@@ -1,4 +1,4 @@
-import React, { use, useState } from 'react'
+import { use, useState } from 'react'
 import type { ITechnology } from '../types/stackType'
 import AvailableStack from './AvailableStack'
 import StackSidebar from './StackSidebar'
