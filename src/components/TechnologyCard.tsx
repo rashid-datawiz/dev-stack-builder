@@ -2,6 +2,7 @@ import React, { use, useState } from 'react'
 import type { ITechnology } from '../types/stackType'
 import AvailableStack from './AvailableStack'
 import StackSidebar from './StackSidebar'
+import { toast } from 'react-toastify'
 
 interface TechProps {
     techStackPromise: Promise<ITechnology[]>
@@ -21,7 +22,9 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
         )
 
         if (alreadyExists) {
-            alert(`${technology.name} is already in your stack!`)
+            toast.warning(
+                `${technology.name} is already in your stack!`
+            )
             return
         }
 
@@ -29,26 +32,48 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
             ...previousStack,
             technology
         ])
-    }
-
-    // Removing the stack
-    const handleRemoveFromStack = (id: string) => {
-        setStack(previousStack =>
-            previousStack.filter(item => item.id !== id)
+        toast.success(
+            `${technology.name} added to your stack!`
         )
     }
 
-    // Removing all stacks
-    const handleRemoveAll = () => {
-        setStack([])
+    // Remove from tech stack
+    const handleRemoveFromStack = (id: string) => {
+
+        const technology = stack.find(
+            item => item.id === id
+        )
+
+        setStack(previousStack =>
+            previousStack.filter(item => item.id !== id)
+        )
+
+        if (technology) {
+            toast.info(
+                `${technology.name} removed from your stack.`
+            )
+        }
     }
+
+    // Remove all
+    const handleRemoveAll = () => {
+
+        if (stack.length === 0) {
+            return
+        }
+
+        setStack([])
+
+        toast.info('All technologies removed from your stack.')
+    }
+
 
     return (
         <section className="bg-white px-6 py-12 container mx-auto">
 
             <div className="mx-w-6xl">
 
-                
+
                 <div className="mb-8">
                     <h2 className="text-3xl font-bold text-slate-900">
                         Explore the{' '}
@@ -62,10 +87,10 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
                     </p>
                 </div>
 
-                
+
                 <div className="grid grid-cols-1 gap-6 lg:grid-cols-4">
 
-                    
+
                     <div className="lg:col-span-3">
                         <AvailableStack
                             cards={cards}
@@ -74,7 +99,7 @@ const TechnologyStack = ({ techStackPromise }: TechProps) => {
                         />
                     </div>
 
-                    
+
                     <div className="lg:col-span-1">
                         <StackSidebar
                             stack={stack}
